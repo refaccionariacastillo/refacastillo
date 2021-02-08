@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Pacifico&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.section__titulo{
+    text-align: center;
+    font-size: 35px;
+    color: orangered;
+    width: 100%
+}
+
+.contenedor{
+    margin: auto;
+    width: 99%;
+}
+/*------------Estilos del Header------------*/
+
+.header{
+    height: 80px;
+    position: relative;
+}
+
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+/*    width: 100%;*/
+}
+
+.logo{
+    margin: 5px;
+    width: 110px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.icon-menu{
+    margin: 5px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: orange;
+    color: grey;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*------------Estilos del menu------------*/
+.nav{
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link{
+    display: block;
+    padding: 15px;
+    background: orangered;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 20px
+}
+
+.menu__link:hover, .select{
+    background: #fba919;
+    color: black;
+/*    font-weight: 700;*/
+}
+
+.mostrar{
+    left: 0;
+}
+
+/*------------Estilos del banner------------*/
+
+.banner{
+    margin-top: -90px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+
+.banner .sombra{
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .contenedor{
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.banner__titulo{
+    font-family: absender1;
+    font-size: 2.3em;
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 5px orangered; 
+    margin: 0;
+    line-height: 40px
+}
+
+.banner__txt{
+    display: none;
+    font-family: absender1;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 5px orangered; 
+    margin: 0;
+    line-height: 10px
+}
+
+.banner__txt2{
+    display: none;
+    font-family: absender1;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 5px orangered; 
+    margin: 0;
+    line-height: 50px
+}
+
+/*------------Estilos de info------------*/
+.info__columna{
+    background: orangered;
+    color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+/*------------Estilos de refacciones------------*/
+.refacciones__columna{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.refacciones__descripcion{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0 ,0 , 0.4);
+    width: 65%;
+    height: 0%;
+    padding: 0px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.refacciones__columna:hover .refacciones__descripcion{
+    height: 100%;
+    padding: 10px;
+}
+
+.refacciones__titulo{
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+/*------------Estilos de footer------------*/
+.footer{
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .social [class^="icon-"]{
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px
+}
+
+/*------------Estilos responsive Moviles------------*/
+@media(min-width:320px){
+    .banner__titulo{
+        display: block;
+        font-size: 1.8em;
+    }
+}
+@media(min-width:480px){
+    .logo{
+        width: 110px;
+    }
+    .banner__titulo{
+        font-size: 35px;
+        line-height: 70px
+    }
+    .banner__txt{
+        display: block;
+        font-size: 2.3em;
+    }
+    .banner__txt2{
+        display: block;
+        font-size: 20px
+    }
+    .info, .refacciones{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -50px;
+    }
+    .info__columna{
+        width: 32%
+    }
+    .info img{
+        object-fit: cover;
+    }
+    .info__titulo{
+        font-size: 20px;
+        margin: 10px 0
+    }
+    
+    .seccion__titulo{
+        width: 100%;
+    }
+    .refacciones{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .refacciones__columna{
+        width: 49%;
+    }
+    .footer .social [class^="icon-"]{
+        margin: 0 10px;
+    }
+}
+@media(min-width:600px){
+    .banner__titulo{
+        font-size: 3em;
+    }
+    .banner__txt{
+        font-size: 3em;
+        line-height: 20px
+    }
+    .banner__txt2{
+        font-size: 1.5em;
+    }
+    
+}
+@media(min-width:768px){
+    .logo{
+    margin: 5px;
+    width: 140px;
+}
+    .banner .contenedor{
+    top: 50%;
+}
+    .banner__titulo{
+        font-size: 60px;
+        line-height: 100px;
+    }
+    
+    .banner__txt{
+        font-size: 70px;
+        line-height: 30px;
+    }
+    .banner__txt2{
+        font-size: 40px;
+        line-height: 70px;
+    }
+    .info{
+        margin-top: -80px;
+    }
+    .refacciones__titulo{
+        font-size: 30px;
+    }
+}
+
+/*------------Estilos responsive Lap y pc------------*/
+
+@media(min-width:1024px){
+    .section__titulo{
+    text-align: center;
+    font-size: 45px;
+    color: orangered;
+    width: 100%;
+    margin: 10px
+}
+    .contenedor{
+        width: 90%;
+    }
+    .logo{
+    margin: 5px;
+    width: 140px;
+    }
+    .banner .contenedor{
+    top: 50%;
+    }
+    .banner__titulo{
+        font-size: 90px;
+        line-height: 150px;
+    }
+    
+    .banner__txt{
+        font-size: 80px;
+        line-height: 50px;
+    }
+    .banner__txt2{
+        font-size: 50px;
+        line-height: 110px;
+    }
+    .info{
+        margin-top: -140px;
+    }
+    .refacciones__titulo{
+        font-size: 40px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .menu__link:hover, .select{
+    background: #fba919;
+    color: black;
+    }
+    .select{
+        background: #fba919;
+    }
+    .menu{
+        display: flex;
+    }
+    .icon-menu{
+        display: none;
+    }
+}
+
+
+
