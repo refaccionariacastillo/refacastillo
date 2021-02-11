@@ -104,6 +104,10 @@ body{
     margin-bottom: 20px;
 }
 
+.banner__img{
+    width: 100%
+}
+
 .banner .sombra{
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -180,15 +184,21 @@ body{
     transition: all 0.4s;
 }
 
+.refacciones__titulo{
+    position: absolute;
+    font-size: 15px;
+    margin: 5px 0;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+
 .refacciones__columna:hover .refacciones__descripcion{
     height: 100%;
     padding: 10px;
 }
 
-.refacciones__titulo{
-    font-size: 25px;
-    margin: 5px 0;
-}
 
 /*------------Estilos de footer------------*/
 .footer{
